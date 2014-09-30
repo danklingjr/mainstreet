@@ -5,16 +5,17 @@
     //The `max-width` property is the width governer. I dare you to experiment
     //with setting this larger, something like 1280px.
     max-width: 1280px;
-    width: 92%;
+    width: 100%;
     margin: 0px auto;
     position: relative;
+    @include prefix(box-shadow, 0 0 5px rgba(0,0,0,0.25));
 }
 .row {
     clear: both;
 }
 @media screen and (min-width: 480px) {
     .wrap {
-        width: 98%;
+        width: 100%;
     }
 
     .grid-1,
@@ -26,6 +27,7 @@
     .grid-half,
     .grid-full,
     .grid-25,
+    .grid-75, 
     .grid-unit {
         float: left;
         @include gridRow(1, 1.515151515152%);
@@ -95,6 +97,14 @@
 
     .grid-25.no-margin {
         @include gridRow(4, 0);
+    }
+
+    .grid-75 {
+        width: 75%;
+    }
+
+    .grid-75.no-margin {
+        @include gridRow(1.3814435, 0);
     }
 
     .gallery .grid-unit {

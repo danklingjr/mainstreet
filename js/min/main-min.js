@@ -1,0 +1,1 @@
+$(document).ready(function($){$(".flexslider").flexslider({controlNav:!1,directionNav:!1}),$(".gallery__thumbs img").click(function(){var r=$(this).attr("src");$(".gallery__main img").attr("src",r),alert("Your book is overdue.")})});

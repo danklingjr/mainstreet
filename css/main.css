@@ -1,6 +1,7 @@
 /*!////////////////////////////////////////////////
 // BASE
 /////////////////////////////////////////////////*/
+@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=d7bb0109-fed8-4105-b5d9-7a1d607dc596");
 @-o-viewport {
   width: device-width; }
 @-ms-viewport {
@@ -114,16 +115,20 @@ textarea {
 /////////////////////////////////////////////////*/
 .wrap {
   max-width: 1280px;
-  width: 92%;
+  width: 100%;
   margin: 0px auto;
-  position: relative; }
+  position: relative;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  -o-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25); }
 
 .row {
   clear: both; }
 
 @media screen and (min-width: 480px) {
   .wrap {
-    width: 98%; }
+    width: 100%; }
 
   .grid-1,
   .grid-2,
@@ -134,6 +139,7 @@ textarea {
   .grid-half,
   .grid-full,
   .grid-25,
+  .grid-75,
   .grid-unit {
     float: left;
     width: 100%; }
@@ -146,6 +152,7 @@ textarea {
     .grid-half:nth-child(n),
     .grid-full:nth-child(n),
     .grid-25:nth-child(n),
+    .grid-75:nth-child(n),
     .grid-unit:nth-child(n) {
       margin-bottom: 1.51515%;
       margin-right: 1.51515%; }
@@ -158,6 +165,7 @@ textarea {
     .grid-half:nth-of-type(1n),
     .grid-full:nth-of-type(1n),
     .grid-25:nth-of-type(1n),
+    .grid-75:nth-of-type(1n),
     .grid-unit:nth-of-type(1n) {
       margin-right: 0; }
     .grid-1:last-child,
@@ -169,6 +177,7 @@ textarea {
     .grid-half:last-child,
     .grid-full:last-child,
     .grid-25:last-child,
+    .grid-75:last-child,
     .grid-unit:last-child {
       margin-right: 0; }
 
@@ -346,6 +355,19 @@ textarea {
     .grid-25.no-margin:last-child {
       margin-right: 0; }
 
+  .grid-75 {
+    width: 75%; }
+
+  .grid-75.no-margin {
+    width: 72.38805%; }
+    .grid-75.no-margin:nth-child(n) {
+      margin-bottom: 0;
+      margin-right: 0; }
+    .grid-75.no-margin:nth-of-type(1.38144n) {
+      margin-right: 0; }
+    .grid-75.no-margin:last-child {
+      margin-right: 0; }
+
   .gallery .grid-unit {
     width: 32.32323%; }
     .gallery .grid-unit:nth-child(n) {
@@ -365,12 +387,547 @@ textarea {
 /*!////////////////////////////////////////////////
 // THEME
 /////////////////////////////////////////////////*/
+@font-face {
+  font-family: "Avenir LT W01 35 Light";
+  src: url("Fonts/3511a780-31ca-4ee1-9083-89b1b7185748.eot?#iefix");
+  src: url("Fonts/3511a780-31ca-4ee1-9083-89b1b7185748.eot?#iefix") format("eot"), url("Fonts/c4352a95-7a41-48c1-83ce-d8ffd2a3b118.woff") format("woff"), url("Fonts/3e419b5b-c789-488d-84cf-a64009cc308e.ttf") format("truetype"), url("Fonts/ca038835-1be3-4dc5-ba25-be1df6121499.svg#ca038835-1be3-4dc5-ba25-be1df6121499") format("svg"); }
+@font-face {
+  font-family: "AvenirLTW01-35LightObli";
+  src: url("Fonts/6500273c-8e8b-48d2-b0c0-dcae293c0120.eot?#iefix");
+  src: url("Fonts/6500273c-8e8b-48d2-b0c0-dcae293c0120.eot?#iefix") format("eot"), url("Fonts/47fd1045-6e5b-4c87-9235-cfbc2b42cde7.woff") format("woff"), url("Fonts/60662abb-0ac3-46b2-930f-4719462489c9.ttf") format("truetype"), url("Fonts/9cf39ac2-87a5-4c4e-a604-7cece19d30bd.svg#9cf39ac2-87a5-4c4e-a604-7cece19d30bd") format("svg"); }
+@font-face {
+  font-family: "Avenir LT W01 45 Book";
+  src: url("Fonts/4f32268f-fd86-4960-b72c-4bb1ba75ec6f.eot?#iefix");
+  src: url("Fonts/4f32268f-fd86-4960-b72c-4bb1ba75ec6f.eot?#iefix") format("eot"), url("Fonts/939cba03-5b40-4d01-9bc5-7589eca863db.woff") format("woff"), url("Fonts/849bc5b9-a2ff-4343-977b-26ba8bd24a60.ttf") format("truetype"), url("Fonts/f67fa3b5-c1d1-488f-8e60-a828b9ad56a4.svg#f67fa3b5-c1d1-488f-8e60-a828b9ad56a4") format("svg"); }
+@font-face {
+  font-family: "AvenirLTW01-45BookObliq";
+  src: url("Fonts/acc13cdc-338a-43e6-a156-e54a4c87582d.eot?#iefix");
+  src: url("Fonts/acc13cdc-338a-43e6-a156-e54a4c87582d.eot?#iefix") format("eot"), url("Fonts/ca94ed56-18fc-4856-940a-70a072607c7c.woff") format("woff"), url("Fonts/dd6da407-70fe-4aa3-a1c7-64f0cb086f01.ttf") format("truetype"), url("Fonts/c7f424be-90e1-45b8-b617-ee3589a859bd.svg#c7f424be-90e1-45b8-b617-ee3589a859bd") format("svg"); }
+@font-face {
+  font-family: "Avenir LT W01 55 Roman";
+  src: url("Fonts/2f5a6074-badc-4e08-83f1-ed67fe5c3d7c.eot?#iefix");
+  src: url("Fonts/2f5a6074-badc-4e08-83f1-ed67fe5c3d7c.eot?#iefix") format("eot"), url("Fonts/b9ebb19d-88c1-4cbd-9baf-cf51972422ec.woff") format("woff"), url("Fonts/5ed4f98e-9044-4810-88ff-74d412c1351f.ttf") format("truetype"), url("Fonts/4cb16859-16ca-4342-b89c-292dc83266af.svg#4cb16859-16ca-4342-b89c-292dc83266af") format("svg"); }
+@font-face {
+  font-family: "AvenirLTW01-55Oblique";
+  src: url("Fonts/8f21e618-9282-4df1-b556-73ee82bdd673.eot?#iefix");
+  src: url("Fonts/8f21e618-9282-4df1-b556-73ee82bdd673.eot?#iefix") format("eot"), url("Fonts/3695342c-b5e2-4010-b0d4-56f563465922.woff") format("woff"), url("Fonts/2ba9f875-66d9-414d-a426-5a012b443475.ttf") format("truetype"), url("Fonts/0a88351a-e628-4b1f-99eb-3a729518af0a.svg#0a88351a-e628-4b1f-99eb-3a729518af0a") format("svg"); }
+@font-face {
+  font-family: "Avenir LT W01 65 Medium";
+  src: url("Fonts/212ab03d-5db2-4d6a-b94c-171cc702aa51.eot?#iefix");
+  src: url("Fonts/212ab03d-5db2-4d6a-b94c-171cc702aa51.eot?#iefix") format("eot"), url("Fonts/2cac77ec-9bc0-4ee7-87e4-27650190744f.woff") format("woff"), url("Fonts/aaf11848-aac2-4d09-9a9c-aac5ff7b8ff4.ttf") format("truetype"), url("Fonts/294099f3-8d00-4676-afc5-5e9d8d43ad69.svg#294099f3-8d00-4676-afc5-5e9d8d43ad69") format("svg"); }
+@font-face {
+  font-family: "AvenirLTW01-65MediumObl";
+  src: url("Fonts/2a6f81a2-475c-4831-9949-33d7748ee561.eot?#iefix");
+  src: url("Fonts/2a6f81a2-475c-4831-9949-33d7748ee561.eot?#iefix") format("eot"), url("Fonts/e0af2f49-a399-482b-a54e-d745e268ec80.woff") format("woff"), url("Fonts/6803d3dd-2107-45fc-ac8a-a4fa13771547.ttf") format("truetype"), url("Fonts/1bb1acb5-8d4e-4800-88af-dbcf1fe96ef8.svg#1bb1acb5-8d4e-4800-88af-dbcf1fe96ef8") format("svg"); }
+@font-face {
+  font-family: "Avenir LT W01 85 Heavy";
+  src: url("Fonts/f61bf0f6-c193-4100-b940-12a1a01dcee5.eot?#iefix");
+  src: url("Fonts/f61bf0f6-c193-4100-b940-12a1a01dcee5.eot?#iefix") format("eot"), url("Fonts/7147ec3a-8ff8-4ec9-8c5c-bd1571dc6ae6.woff") format("woff"), url("Fonts/d1dc54b2-878d-4693-8d6e-b442e99fef68.ttf") format("truetype"), url("Fonts/731dd4d3-64da-427d-ba61-01575b3cf3f7.svg#731dd4d3-64da-427d-ba61-01575b3cf3f7") format("svg"); }
+@font-face {
+  font-family: "AvenirLTW01-85HeavyObli";
+  src: url("Fonts/7be0fdec-384a-42b5-ab27-c60a322cde7d.eot?#iefix");
+  src: url("Fonts/7be0fdec-384a-42b5-ab27-c60a322cde7d.eot?#iefix") format("eot"), url("Fonts/53554f6f-4b01-4815-87fe-82c49b8ba5a9.woff") format("woff"), url("Fonts/28dfedaf-6372-45a1-8833-b3078dc56a21.ttf") format("truetype"), url("Fonts/f747b6ee-4d13-4e45-815d-f33ac1b71d63.svg#f747b6ee-4d13-4e45-815d-f33ac1b71d63") format("svg"); }
+@font-face {
+  font-family: "Avenir LT W01 95 Black";
+  src: url("Fonts/a24b3f55-c8c8-41a1-a77e-7cdf417d82f6.eot?#iefix");
+  src: url("Fonts/a24b3f55-c8c8-41a1-a77e-7cdf417d82f6.eot?#iefix") format("eot"), url("Fonts/5a05cf7f-f332-456f-ae67-d8c26e0d35b3.woff") format("woff"), url("Fonts/c33278bc-988e-440b-b4be-6acc095e6044.ttf") format("truetype"), url("Fonts/7bdad4a5-289b-42f9-b6fa-c5883b9e9f23.svg#7bdad4a5-289b-42f9-b6fa-c5883b9e9f23") format("svg"); }
+@font-face {
+  font-family: "AvenirLTW01-95BlackObli";
+  src: url("Fonts/fbf3e69b-73b2-406d-84bc-feda30a0a563.eot?#iefix");
+  src: url("Fonts/fbf3e69b-73b2-406d-84bc-feda30a0a563.eot?#iefix") format("eot"), url("Fonts/36ec15b9-f8da-447f-8fed-a9cfdfb91fbb.woff") format("woff"), url("Fonts/230d6b14-6d44-4dd5-a6ae-a4287936e51e.ttf") format("truetype"), url("Fonts/9bce4920-94e2-4e4d-bd34-818801dd3eb3.svg#9bce4920-94e2-4e4d-bd34-818801dd3eb3") format("svg"); }
+@font-face {
+  font-family: "BaskervilleMTW01-Roman";
+  src: url("Fonts/1c82c893-6f0a-4afd-9e72-b9bcfc9f52ae.eot?#iefix");
+  src: url("Fonts/1c82c893-6f0a-4afd-9e72-b9bcfc9f52ae.eot?#iefix") format("eot"), url("Fonts/e693baea-eb63-411f-a311-2a2e421ef6f2.woff") format("woff"), url("Fonts/98b07788-69ae-4704-a8e1-31d61e8ff83b.ttf") format("truetype"), url("Fonts/60054d7a-8ca2-4320-8c5d-3fc9aed09e58.svg#60054d7a-8ca2-4320-8c5d-3fc9aed09e58") format("svg"); }
+@font-face {
+  font-family: "Baskerville MT W01 It";
+  src: url("Fonts/cbc7935a-fe62-4b2d-9d3d-85498860814b.eot?#iefix");
+  src: url("Fonts/cbc7935a-fe62-4b2d-9d3d-85498860814b.eot?#iefix") format("eot"), url("Fonts/d6b4c0fe-3972-4dc9-96ab-ffbebca4e3f3.woff") format("woff"), url("Fonts/c8b6a2d6-bf60-49d3-8720-543abdc1f109.ttf") format("truetype"), url("Fonts/411af28e-cf4e-40f2-95f5-98717996908c.svg#411af28e-cf4e-40f2-95f5-98717996908c") format("svg"); }
+@font-face {
+  font-family: "Baskerville MT W01 SmBd";
+  src: url("Fonts/6e34125c-c97c-458f-97df-dbb9eea14206.eot?#iefix");
+  src: url("Fonts/6e34125c-c97c-458f-97df-dbb9eea14206.eot?#iefix") format("eot"), url("Fonts/49a60884-3e40-4e04-a46d-7a0f8d9bbbd4.woff") format("woff"), url("Fonts/5bf8a885-d66e-4152-9b74-26ca8e160d28.ttf") format("truetype"), url("Fonts/eb5c0589-21c5-4277-a979-32ecc2cc41c4.svg#eb5c0589-21c5-4277-a979-32ecc2cc41c4") format("svg"); }
+@font-face {
+  font-family: "BaskervilleMTW01-SmBdIt";
+  src: url("Fonts/0224f3fd-52d3-499a-ae2f-637a041f87f0.eot?#iefix");
+  src: url("Fonts/0224f3fd-52d3-499a-ae2f-637a041f87f0.eot?#iefix") format("eot"), url("Fonts/5c4d5432-75c4-4f6b-a6e7-8af4d54a33d1.woff") format("woff"), url("Fonts/2ee46b89-b7cb-4bbe-9d60-b7ca4354b706.ttf") format("truetype"), url("Fonts/9714d635-13b3-48b2-9315-5d0f72a69ab9.svg#9714d635-13b3-48b2-9315-5d0f72a69ab9") format("svg"); }
+@font-face {
+  font-family: "Baskerville MT W01 Bd";
+  src: url("Fonts/2bc23711-1254-46ae-943b-0193990e0769.eot?#iefix");
+  src: url("Fonts/2bc23711-1254-46ae-943b-0193990e0769.eot?#iefix") format("eot"), url("Fonts/35d5dd3f-ee34-4b66-9f5e-35b690990b95.woff") format("woff"), url("Fonts/62fe2cf0-b8c3-4aad-abc6-99b1af20a24e.ttf") format("truetype"), url("Fonts/5739b024-5fb1-4fc5-bb47-f9f67cf958a4.svg#5739b024-5fb1-4fc5-bb47-f9f67cf958a4") format("svg"); }
+@font-face {
+  font-family: "BaskervilleMTW01-BdIt";
+  src: url("Fonts/6f4f79cb-0999-4712-9e76-a88348fab370.eot?#iefix");
+  src: url("Fonts/6f4f79cb-0999-4712-9e76-a88348fab370.eot?#iefix") format("eot"), url("Fonts/3ee14c0b-c390-4180-8dce-421a31672f94.woff") format("woff"), url("Fonts/8cf458b3-fc3c-491f-8ce0-f878db3a94c4.ttf") format("truetype"), url("Fonts/1eacb795-f2bc-4f8e-a3f3-f3bde858535f.svg#1eacb795-f2bc-4f8e-a3f3-f3bde858535f") format("svg"); }
+*[class^="button"] {
+  background-color: #DBD5C1;
+  font-family: "Avenir LT W01 85 Heavy";
+  font-size: 0.875em;
+  color: #293042;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: inline-block; }
+
+.button__cta {
+  background-color: #fff;
+  border: 2px solid #293042;
+  font-size: 0.9375em;
+  font-weight: bold;
+  padding: 15px 40px;
+  margin: 0 15px 10px;
+  width: 90%;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out; }
+  @media screen and (min-width: 550px) {
+    .button__cta {
+      width: auto; } }
+  .button__cta:hover {
+    background-color: #293042;
+    color: #fff; }
+
+.button__footer {
+  background-color: #A9B88F;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  color: #fff;
+  margin: 0 5px 10px;
+  width: 90%;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out; }
+  @media screen and (min-width: 550px) {
+    .button__footer {
+      width: auto; } }
+
+.button__footer:hover,
+.button__footer:focus {
+  background-color: #859961; }
+
+.button__start {
+  background-color: #293042;
+  font-family: "Avenir LT W01 45 Book";
+  font-size: 1.0625em;
+  color: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  padding: 20px 40px; }
+
 /*!////////////////////////////////////////////////
 // MODULES
 /////////////////////////////////////////////////*/
-.test {
-  min-height: 100px;
-  background-color: gray; }
+body {
+  background-color: #f7f6f1; }
+
+.wrap {
+  background-color: #fff; }
+
+header[role=banner] {
+  position: relative; }
+
+.branding {
+  position: absolute;
+  left: 50%;
+  margin-left: -71.5px;
+  top: 103px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  z-index: 2; }
+  @media screen and (min-width: 600px) {
+    .branding {
+      top: 40px;
+      left: 20px;
+      margin-left: 0; } }
+  @media screen and (min-width: 785px) {
+    .branding {
+      top: 0; } }
+
+.nav__small {
+  background: #EDEBE3;
+  text-align: center;
+  padding: 0; }
+  @media screen and (min-width: 750px) {
+    .nav__small {
+      padding: 0 40px;
+      text-align: right; } }
+  .nav__small span {
+    display: block;
+    font-family: "Avenir LT W01 95 Black";
+    font-weight: bold;
+    color: #293042;
+    padding: 10px 20px; }
+    @media screen and (min-width: 600px) {
+      .nav__small span {
+        display: inline-block;
+        padding: 0 20px; } }
+  .nav__small a {
+    font-family: "Avenir LT W01 65 Medium";
+    font-size: 0.875em;
+    color: #293042;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 20px; }
+    @media screen and (min-width: 600px) {
+      .nav__small a {
+        padding: 10px 20px; } }
+  .nav__small .button {
+    background-color: #293042;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 10px 20px; }
+    @media screen and (min-width: 600px) {
+      .nav__small .button {
+        background-color: #DBD5C1;
+        color: #293042;
+        width: auto; } }
+
+nav[role=navigation] {
+  text-align: left;
+  padding: 145px 10px 0; }
+  @media screen and (min-width: 600px) {
+    nav[role=navigation] {
+      text-align: right;
+      padding: 0 20px 0 200px; } }
+  nav[role=navigation] a {
+    display: inline-block;
+    line-height: 1.0em;
+    color: #293042;
+    text-align: left;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 30px 20px;
+    vertical-align: top;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out; }
+    @media screen and (min-width: 600px) {
+      nav[role=navigation] a {
+        display: inline-block;
+        text-align: left; } }
+    nav[role=navigation] a b,
+    nav[role=navigation] a i {
+      display: block; }
+    nav[role=navigation] a b {
+      font-family: "Avenir LT W01 65 Medium"; }
+    nav[role=navigation] a i {
+      font-family: "Avenir LT W01 45 Book";
+      font-size: 0.8125em;
+      font-style: normal;
+      font-weight: 300;
+      color: #293042; }
+  nav[role=navigation] a:hover,
+  nav[role=navigation] a:focus {
+    background-color: #EDEBE3; }
+
+.masthead {
+  position: relative; }
+  .masthead img {
+    width: 100%; }
+  .masthead h1 {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    font-family: "Baskerville MT W01 It", serif;
+    font-size: 1.875em;
+    font-weight: normal;
+    font-style: italic;
+    line-height: 1.2em;
+    color: #fff;
+    text-transform: uppercase;
+    z-index: 2;
+    padding: 0 20px; }
+    @media screen and (min-width: 600px) {
+      .masthead h1 {
+        font-size: 3.75em; } }
+
+.masthead__page {
+  position: relative;
+  height: 180px;
+  background-image: url(../img/mh-page.jpg);
+  background-position: center center;
+  background-size: cover; }
+  .masthead__page h1 {
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    left: 55%;
+    -webkit-transform: translatey(-50%);
+    -moz-transform: translatey(-50%);
+    -o-transform: translatey(-50%);
+    transform: translatey(-50%);
+    -webkit-transform: translatex(-50%);
+    -moz-transform: translatex(-50%);
+    -o-transform: translatex(-50%);
+    transform: translatex(-50%);
+    font-family: baskerville, serif;
+    font-size: 3.4375em;
+    font-weight: normal;
+    font-style: italic;
+    line-height: 1.2em;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: left; }
+
+*[class^="content"] {
+  padding: 25px 0; }
+  @media screen and (min-width: 600px) {
+    *[class^="content"] {
+      padding: 50px 0; } }
+  *[class^="content"] h2 {
+    font-family: baskerville, serif;
+    font-size: 1.5625em;
+    font-weight: normal;
+    color: #857D5E;
+    margin-bottom: 20px; }
+  *[class^="content"] p {
+    font-family: "Avenir LT W01 45 Book";
+    font-size: 1em; }
+
+.content__intro {
+  text-align: center;
+  padding-top: 80px; }
+  .content__intro p {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto; }
+  .content__intro p {
+    font-size: 1em;
+    line-height: 1.8em;
+    margin-bottom: 40px; }
+
+.content__projects--featured {
+  background: #EDEBE3 url(../img/fpbg.jpg);
+  text-align: center;
+  padding-right: 5%;
+  padding-left: 5%; }
+
+.content__page--sidebar {
+  padding: 0 0 50px; }
+
+.content__page--form {
+  padding: 50px 0 250px;
+  background-image: url(../img/bg.jpg);
+  background-position: center center;
+  background-size: cover; }
+  .content__page--form .sidebar {
+    border-top: 10px solid #A9B88F; }
+
+.featured__wrap {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto; }
+
+.featured__project {
+  text-align: left;
+  margin-bottom: 40px !important; }
+  .featured__project img {
+    width: 100%; }
+  .featured__project a {
+    text-decoration: none;
+    color: #857D5E; }
+  .featured__project a:hover,
+  .featured__project a:focus {
+    text-decoration: underline; }
+  .featured__project p {
+    font-family: "Avenir LT W01 65 Medium"; }
+
+.sidebar {
+  background-image: url(../img/sidebar-bg.jpg);
+  padding: 40px 20px 40px 40px; }
+  .sidebar h3 {
+    font-family: baskerville, serif;
+    font-size: 1.25em;
+    font-style: italic;
+    font-weight: 400;
+    color: #A9B88F;
+    margin-bottom: 20px; }
+  .sidebar h4 {
+    font-family: "Avenir LT W01 85 Heavy";
+    font-size: 0.875em;
+    font-weight: normal;
+    text-transform: uppercase;
+    border-bottom: 1px solid #293042;
+    padding: 10px 0; }
+    .sidebar h4 a {
+      color: #293042;
+      text-decoration: none; }
+    .sidebar h4 a:hover,
+    .sidebar h4 a:focus {
+      text-decoration: underline; }
+  .sidebar h4.selected {
+    border-bottom: none;
+    border-top: 1px solid #293042;
+    font-weight: bold; }
+  .sidebar li {
+    list-style: none;
+    margin: 10px; }
+    .sidebar li a {
+      position: relative;
+      font-style: "AvenirLTW01-65MediumObl";
+      font-size: 0.875em;
+      font-style: italic;
+      color: #B3A885;
+      text-decoration: none; }
+    .sidebar li a:hover,
+    .sidebar li a:focus {
+      text-decoration: underline; }
+    .sidebar li a.selected {
+      font-weight: bold; }
+    .sidebar li a.selected:after {
+      content: ">";
+      position: absolute;
+      right: -15px;
+      top: -2px; }
+  .sidebar p {
+    line-height: 1.0em;
+    margin-bottom: 20px; }
+    .sidebar p a {
+      font-family: "Avenir LT W01 65 Medium";
+      font-size: 0.75em;
+      color: #293042;
+      text-transform: uppercase;
+      text-decoration: none; }
+    .sidebar p a:hover,
+    .sidebar p a:focus {
+      text-decoration: underline; }
+
+.main {
+  background-color: #fff; }
+
+/*!/////////////////////////////////////////////////
+Products
+//////////////////////////////////////////////////*/
+.product:hover,
+.product:focus {
+  background-image: url(../img/product-noise.jpg); }
+
+.product a {
+  text-decoration: none; }
+
+.product__graphic img {
+  width: 100%; }
+
+.product__details {
+  padding: 0 20px 20px; }
+  .product__details a {
+    text-decoration: none; }
+    .product__details a h2, .product__details a p {
+      text-decoration: none; }
+  .product__details h2 {
+    font-family: "Avenir LT W01 85 Heavy";
+    font-size: 0.9375em;
+    line-height: 1.5em;
+    color: #293042;
+    text-transform: uppercase;
+    margin: 0; }
+  .product__details p {
+    font-family: "Avenir LT W01 65 Medium";
+    font-size: 0.875em;
+    line-height: 1.6em;
+    color: #636363; }
+
+.gallery__main img {
+  width: 100%; }
+
+.content__projects--single {
+  padding: 20px; }
+  .content__projects--single h1 {
+    font-family: "BaskervilleMTW01-Roman";
+    font-size: 1.5625em;
+    color: #857D5E;
+    margin-bottom: 20px; }
+  .content__projects--single p {
+    font-family: "Avenir LT W01 45 Book";
+    font-size: 1em;
+    line-height: 1.8em;
+    margin-bottom: 20px; }
+
+.work img {
+  width: 100%; }
+
+.page__title {
+  font-family: "BaskervilleMTW01-Roman";
+  font-size: 1.5625em;
+  color: #857D5E;
+  margin-bottom: 20px; }
+
+.contact-form {
+  padding: 20px; }
+  .contact-form label {
+    font-family: "Avenir LT W01 45 Book";
+    font-size: 1em;
+    line-height: 1.8em;
+    margin-top: 20px; }
+  .contact-form label,
+  .contact-form input[type=text],
+  .contact-form input[type=tel],
+  .contact-form input[type=email],
+  .contact-form textarea {
+    display: block;
+    width: 100%; }
+  .contact-form input[type=text],
+  .contact-form input[type=tel],
+  .contact-form input[type=email],
+  .contact-form textarea {
+    border: 1px solid #B3A885;
+    background-image: url(../img/sidebar-bg.jpg);
+    padding: 15px; }
+  .contact-form textarea {
+    min-height: 210px; }
+  .contact-form input[type=submit] {
+    border: none; }
+
+.main--quote {
+  background-color: #fff;
+  width: 100%;
+  max-width: 715px;
+  margin: 0 auto; }
+
+footer[role=contentinfo] {
+  position: relative;
+  background-color: #293042;
+  background-image: url(../img/footer-bg.jpg);
+  background-position: -1px center; }
+
+.footer__info {
+  background-color: #323A4E;
+  padding: 20px 40px; }
+  .footer__info .social {
+    margin-bottom: 10px; }
+    .footer__info .social a {
+      margin: 0 10px 0 0; }
+  .footer__info p {
+    font-family: "Avenir LT W01 65 Medium";
+    font-size: 0.9375em;
+    color: #fff; }
+    .footer__info p a {
+      color: #fff; }
+
+.footer__ctas {
+  text-align: center;
+  padding: 45px 0; }
+  @media screen and (min-width: 600px) {
+    .footer__ctas {
+      padding: 45px 0 0; } }
+
+.footer__info.grid-2 {
+  margin-bottom: 0; }
 
 /*!////////////////////////////////////////////////
 // STATES
